@@ -71,3 +71,24 @@ namespace CrudEstudiantesGitFlow
             }
         }
 
+        static void ActualizarEstudiante()
+        {
+            var lista = CargarDatos();
+            Console.Write("Matricula del estudiante a actualizar: ");
+            string mat = Console.ReadLine() ?? "";
+
+            var est = lista.Find(e => e.Matricula == mat);
+            if (est == null)
+            {
+                Console.WriteLine("Estudiante no encontrado.");
+                return;
+            }
+
+            Console.Write("Nuevo nombre: ");
+            est.Nombre = Console.ReadLine() ?? "";
+            Console.Write("Nueva carrera: ");
+            est.Carrera = Console.ReadLine() ?? "";
+
+            GuardarDatos(lista);
+            Console.WriteLine("Estudiante actualizado.");
+        }

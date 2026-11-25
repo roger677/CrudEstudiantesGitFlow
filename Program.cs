@@ -56,3 +56,18 @@ namespace CrudEstudiantesGitFlow
         }
     }
 }
+
+        static void ListarEstudiantes()
+        {
+            var lista = CargarDatos();
+            if (lista.Count == 0)
+            {
+                Console.WriteLine("No hay estudiantes registrados.");
+                return;
+            }
+            foreach (var est in lista)
+            {
+                Console.WriteLine($"Matricula: {est.Matricula} | Nombre: {est.Nombre} | Carrera: {est.Carrera}");
+            }
+        }
+

@@ -29,6 +29,7 @@ namespace CrudEstudiantesGitFlow
             File.WriteAllText(archivo, json);
         }
 
+ feature/crear-estudiante
         static void CrearEstudiante()
         {
             var lista = CargarDatos();
@@ -47,6 +48,11 @@ namespace CrudEstudiantesGitFlow
         static void Main(string[] args)
         {
             Console.WriteLine("Estructura base y crear estudiante listos.");
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Estructura base del CRUD inicializada.");
+ developer
         }
     }
 }

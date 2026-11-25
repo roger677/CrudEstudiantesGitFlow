@@ -29,9 +29,30 @@ namespace CrudEstudiantesGitFlow
             File.WriteAllText(archivo, json);
         }
 
+ feature/crear-estudiante
+        static void CrearEstudiante()
+        {
+            var lista = CargarDatos();
+            Console.Write("Matricula: ");
+            string mat = Console.ReadLine() ?? "";
+            Console.Write("Nombre: ");
+            string nom = Console.ReadLine() ?? "";
+            Console.Write("Carrera: ");
+            string car = Console.ReadLine() ?? "";
+
+            lista.Add(new Estudiante { Matricula = mat, Nombre = nom, Carrera = car });
+            GuardarDatos(lista);
+            Console.WriteLine("Estudiante guardado correctamente.");
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Estructura base y crear estudiante listos.");
+
         static void Main(string[] args)
         {
             Console.WriteLine("Estructura base del CRUD inicializada.");
+ developer
         }
     }
 }
